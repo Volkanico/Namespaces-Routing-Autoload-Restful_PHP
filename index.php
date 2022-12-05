@@ -18,12 +18,7 @@ $controller = new $controllerName();
 
 /* Check if method is defined */
 $dataToView["data"] = array();
-
-if(method_exists($controller,$_GET["action"])){
-    $dataToView["data"] = $controller->{$_GET["action"]}();
-}
-
-
+if(method_exists($controller,$_GET["action"])) $dataToView["data"] = $controller->{$_GET["action"]}();
 
 
 /* Load views */

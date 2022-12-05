@@ -1,5 +1,6 @@
 <?php 
 require_once ('./autoloadModel.php');
+require_once './router.php';
 
 
 class camisetaController{
