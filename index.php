@@ -1,5 +1,9 @@
 <?php 
 
+require_once (__DIR__ . '/configRouter.php');
+require_once (__DIR__ . '/router.php');
+$router = new Router();
+$router->run();
 require_once 'config/config.config.php';
 require_once 'model/db.class.php';
 

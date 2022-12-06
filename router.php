@@ -1,5 +1,34 @@
 <?php
 
+    class Router {
+        private $controller;
+        private $method;
+
+        public function __construct() {
+            $this->matchRoute();
+        }
+        public function matchRoute() {
+            var_dump(URL);
+        }
+        public function run() {
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     $routes = [];
 
     function route($action,$callback){
@@ -21,7 +50,7 @@
         echo(call_user_func($callback));
     }
 
-    /* USE PER METHOD
+     USE PER METHOD
     
     require_once './router.php';
 
