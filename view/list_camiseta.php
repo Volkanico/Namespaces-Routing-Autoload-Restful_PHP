@@ -9,7 +9,7 @@
 		
 	</div>
 	<?php
-	header("HTTP/1.1 400 OK");
+	
 	if(count($dataToView["data"])>0){
 		foreach($dataToView["data"] as $camiseta){
 			?>

@@ -1,7 +1,7 @@
 <?php
 $folderPath = $_SERVER['SCRIPT_NAME'];
 $urlPath = $_SERVER['REQUEST_URI'];
-$url = substr($urlPath,strlen($folderPath));
+$url = $urlPath;
 
 define('URL',$url);
 

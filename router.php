@@ -9,9 +9,34 @@
         }
         public function matchRoute() {
             var_dump(URL);
+
+            //$url1 = substr(URL,12);
+            //$control = explode('&',$url1);
+
+            //$url2 = substr(URL,28);
+            //$actionmethod = explode('&',$url2);
+            $url = explode('/',URL);
+            //$actionmethod = explode('?',URL);
+            //$actionmethod2 = explode('&',URL);
+            //var_dump($control);
+            //var_dump($actionmethod);
+            var_dump($url);
+            //var_dump($actionmethod);
+            //var_dump($actionmethod2);
+            
+            $this->controller = !empty($url[1]) ? $url[1] : 'Camiseta';
+            $this->method= !empty($url[2]) ? $url[2] : 'list';
+
+            $this->controller = $this->controller . 'Controller';
+            require_once (__DIR__.'/controller/'.$this->controller.'.controller.php');
+            
         }
         public function run() {
-
+             
+            $controller = new $this->controller();
+            $method = $this->method;
+            $controller->$method();
+            
         }
 
 
