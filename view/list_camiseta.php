@@ -1,3 +1,4 @@
+
 <div class="row">
 	<div class="col-md-12 text-right">
 		<a href="index.php?controller=camiseta&action=edit" class="btn btn-outline-primary">Crear camiseta</a>
@@ -8,6 +9,7 @@
 		
 	</div>
 	<?php
+	header("HTTP/1.1 400 OK");
 	if(count($dataToView["data"])>0){
 		foreach($dataToView["data"] as $camiseta){
 			?>

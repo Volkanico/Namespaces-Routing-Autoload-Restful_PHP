@@ -1,6 +1,7 @@
 <?php 
-//namespace mvc\model;
-//use mvc\model\Db;
+namespace model;
+use model\Db;
+
 class Camiseta {
 
 	private $table = 'camisetes';

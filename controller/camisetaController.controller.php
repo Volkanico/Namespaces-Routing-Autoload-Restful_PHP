@@ -1,4 +1,5 @@
 <?php 
+use model\Camiseta;
 require_once ('./autoloadModel.php');
 require_once './router.php';
 
