@@ -5,7 +5,6 @@ $url = $urlPath;
 
 define('URL',$url);
 
-
 echo $folderPath . '<br>';
 echo $urlPath . '<br>';
 echo $url . '<br>';
@@ -13,5 +12,4 @@ echo $url . '<br>';
 //echo '<pre>';
 //var_dump($_SERVER);
 //echo '<pre>';
-
 ?>

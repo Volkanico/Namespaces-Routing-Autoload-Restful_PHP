@@ -6,6 +6,4 @@ function autoloadModel($className){
     $fullpath = $className . $extension;
     include_once $fullpath;
 }
-
-
 ?>

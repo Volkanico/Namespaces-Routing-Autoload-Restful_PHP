@@ -34,8 +34,7 @@ $carreto= array (
     new camisetaPerArray("4","Camiseta hippie","Per hippies dels anys 60","10"),
     new camisetaPerArray("5","Camiseta de moda","La seva moda dura 3 dies","90"),
     new camisetaPerArray("6","Camiseta de esport","Per fer-la sudar","90")
-  )
- 
+);
 ?>
 
 <!DOCTYPE html>
