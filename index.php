@@ -1,27 +1,23 @@
 <?php
 // Include router class
-include('Route.php');
-//include('./controller/camisetaController.controller.php');
-// Add base route (startpage)
-Route::add('/','camisetaController@list');
+require_once ('./autoload.php');
 
-// Simple test route that simulates static html file
+// INDEX LIST
+Route::add('/',function() {
+    echo "welcome";
+});
+
+// EDIT_CAMISETA
 Route::add('/test.html',function(){
     echo 'Hello from test.html';
 });
 
-// Post route example
+//DELETE_CAMISETA
 Route::add('/contact-form',function(){
     echo '<form method="post"><input type="text" name="test" /><input type="submit" value="send" /></form>';
 },'get');
 
-// Post route example
-Route::add('/contact-form',function(){
-    echo 'Hey! The form has been sent:<br/>';
-    print_r($_POST);
-},'post');
-
-// Accept only numbers as parameter. Other characters will result in a 404 error
+// CARRETO
 Route::add('/foo/([0-9]*)/bar',function($var1){
     echo $var1.' is a great number!';
 });

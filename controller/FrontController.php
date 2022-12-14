@@ -1,12 +1,14 @@
 <?php 
+namespace controller;
+use controller\camisetaController;
 /*
 require_once (__DIR__ . '/configRouter.php');
 require_once (__DIR__ . '/router.php');
 $router = new Router();
 $router->run();
 */
-require_once '../config/config.config.php';
-require_once '../model/db.class.php';
+require_once '../config/config.php';
+require_once '../model/db.php';
 
 if(!isset($_GET["controller"])) $_GET["controller"] = constant("DEFAULT_CONTROLLER");
 if(!isset($_GET["action"])) $_GET["action"] = constant("DEFAULT_ACTION");
@@ -14,11 +16,12 @@ if(!isset($_GET["action"])) $_GET["action"] = constant("DEFAULT_ACTION");
 $controller_path = 'controller/'.$_GET["controller"].'.php';
 
 /* Check if controller exists */
-if(!file_exists($controller_path)) $controller_path = '../controller/'.constant("DEFAULT_CONTROLLER").'Controller.controller.php';
+if(!file_exists($controller_path)) $controller_path = '../controller/'.constant("DEFAULT_CONTROLLER").'Controller.php';
 
 /* Load controller */
 require_once $controller_path;
 $controllerName = $_GET["controller"].'Controller';
+var_dump($controllerName);
 $controller = new $controllerName();
 
 /* Check if method is defined */
@@ -30,5 +33,7 @@ if(method_exists($controller,$_GET["action"])) $dataToView["data"] = $controller
 require_once '../view/template/header.php';
 require_once '../view/'.$controller->view.'.php';
 require_once '../view/template/footer.php';
-
+//var_dump($dataToView);
+//var_dump($_GET["action"]);
+//var_dump($controllerName);
 ?>

@@ -1,7 +1,8 @@
 <?php 
+namespace controller;
 use model\Camiseta;
-require_once ('../autoloadModel.php');
 
+require_once ('../autoload.php');
 
 class camisetaController{
 	public $page_title;

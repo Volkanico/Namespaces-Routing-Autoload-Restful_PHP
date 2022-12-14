@@ -1,6 +1,6 @@
 <?php 
 namespace model;
-require_once '../config/config.config.php';
+require_once ('../autoload.php');
 use PDO;
 use PDOException;
 class Db {
