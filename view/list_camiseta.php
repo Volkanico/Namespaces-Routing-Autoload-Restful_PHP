@@ -46,8 +46,8 @@
 					<div class="card-text"><?php echo nl2br($camiseta['descripcio']); ?></div>
 					<h5 class="card-title"><?php echo $camiseta['preu']; ?></h5>
 					<hr class="mt-1"/>
-					<a href="FrontController.php?controller=camiseta&action=edit&id=<?php echo $camiseta['id']; ?>" class="btn btn-primary">Editar</a>
-					<a href="FrontController.php?controller=camiseta&action=confirmDelete&id=<?php echo $camiseta['id']; ?>" class="btn btn-danger">Eliminar</a>
+					<a href="/form/<?php echo $camiseta['preu']; ?>" class="btn btn-primary">Editar</a>
+					<a href="/product/confirmDelete/<?php echo $camiseta['id']; ?>" class="btn btn-danger">Eliminar</a>
 				</div>
 			</div>
 			<?php

@@ -53,14 +53,21 @@ class camisetaController{
 	public function confirmDelete(){
 		$this->page_title = 'Eliminar camiseta';
 		$this->view = 'confirm_delete_camiseta';
-		return $this->camisetaObj->getCamisetaById($_GET["id"]);
+		if(isset($_GET["id"])) $id = $_GET["id"];
+		$dataToView = $this->camisetaObj->getCamisetaById($id);
+		$a = new View();
+		$a->render('confirm_delete_camiseta.php',$dataToView);
 	}
 
 	// Delete 
 	public function delete(){
 		$this->page_title = 'Listado de camiseta';
 		$this->view = 'delete_camiseta';
-		return $this->camisetaObj->deleteCamisetaById($_POST["id"]);
+		if(isset($_GET["id"])) $id = $_GET["id"];
+		
+		$dataToView = $this->camisetaObj->deleteCamisetaById($id);
+		$a = new View();
+		$a->render('delete_camiseta.php',$dataToView);
 	}
 }
 ?>

@@ -11,22 +11,38 @@ Route::add('/', function () {
     
 });
 
+
+
 Route::add('/form', function () {
     $controller = new camisetaController();
     $controller->edit();
 });
+Route::add('/form/(\d+)', function () {
+    $controller = new camisetaController();
+    $controller->edit();
+});
 
+
+
+Route::add('/product/(\d+)', function () {
+    $controller = new camisetaController();
+    $controller->save();
+}, 'POST');
 Route::add('/product/add', function () {
     $controller = new camisetaController();
     $controller->save();
 }, 'POST');
 
-Route::add('/product/confirmDelete', function () {
+
+
+
+Route::add('/product/confirmDelete/(\d+)', function () {
     $controller = new camisetaController();
     $controller->confirmDelete();
 });
 
-Route::add('/product/delete', function () {
+
+Route::add('/product/delete/(\d+)', function () {
     $controller = new camisetaController();
     $controller->delete();
 },'POST');
