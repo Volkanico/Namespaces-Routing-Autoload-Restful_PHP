@@ -24,7 +24,7 @@
 
 <div class="row">
 	<div class="col-md-12 text-right">
-		<a href="FrontController.php?controller=camiseta&action=edit" class="btn btn-outline-primary">Crear camiseta</a>
+		<a href="/form" class="btn btn-outline-primary">Crear camiseta</a>
 		<div class="col-3">
 				<a href="view/carreto.php" class="btn btn-outline-primary">Carreto</a>
 			</div>

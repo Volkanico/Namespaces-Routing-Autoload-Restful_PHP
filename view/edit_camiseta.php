@@ -34,12 +34,12 @@ if(isset($dataToView["data"]["preu"])) $preu = $dataToView["data"]["preu"];
 	if(isset($_GET["response"]) and $_GET["response"] === true){
 		?>
 		<div class="alert alert-success">
-			Operación realizada correctamente. <a href="FrontController.php?controller=camiseta&action=list">Volver al listado</a>
+			Operación realizada correctamente. <a href="/">Volver al listado</a>
 		</div>
 		<?php
 	}
 	?>
-	<form class="form" action="FrontController.php?controller=camiseta&action=save" method="POST">
+	<form class="form" action="/product/add" method="POST">
 		
 		<div class="form-group">
 			<label>Nom</label>
@@ -52,7 +52,7 @@ if(isset($dataToView["data"]["preu"])) $preu = $dataToView["data"]["preu"];
 		<label>Preu</label>
 		<input type="number" name="preu" value="<?php echo $preu; ?>" />
 		<input type="submit" value="Guardar" class="btn btn-primary"/>
-		<a class="btn btn-outline-danger" href="FrontController.php?controller=camiseta&action=list">Cancelar</a>
+		<a class="btn btn-outline-danger" href="/">Cancelar</a>
 	</form>
 </div>
 
