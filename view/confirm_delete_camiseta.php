@@ -9,3 +9,8 @@
 		<a class="btn btn-outline-success" href="FrontController.php?controller=camiseta&action=list">Cancelar</a>
 	</form>
 </div>
+
+</div>
+</body>
+<!--FINAL DEL CODI HTML-->
+</html>

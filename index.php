@@ -1,16 +1,22 @@
 <?php
-// Include router class
+use controller\camisetaController;
+use routes\Route;
+
 require_once ('./autoload.php');
+
+
 
 // INDEX LIST
 Route::add('/',function() {
-    echo "welcome";
-});
+    $controller = new camisetaController;
+
+   $controller->list();
+},'get');
 
 // EDIT_CAMISETA
 Route::add('/test.html',function(){
     echo 'Hello from test.html';
-});
+},'post');
 
 //DELETE_CAMISETA
 Route::add('/contact-form',function(){
@@ -20,7 +26,7 @@ Route::add('/contact-form',function(){
 // CARRETO
 Route::add('/foo/([0-9]*)/bar',function($var1){
     echo $var1.' is a great number!';
-});
+},'get');
 
 Route::run('/');
 ?>

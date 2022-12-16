@@ -77,6 +77,9 @@ $carreto= array (
         <a class="btn btn-outline-success" href="../index.php">Comprar</a>
         <a class="btn btn-outline-danger" href="../index.php">Cancelar</a>
     </div>
-    </div>
+    
+    
+</div>
 </body>
+<!--FINAL DEL CODI HTML-->
 </html>

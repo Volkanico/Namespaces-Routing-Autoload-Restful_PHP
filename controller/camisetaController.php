@@ -2,7 +2,7 @@
 namespace controller;
 use model\Camiseta;
 
-require_once ('../autoload.php');
+require_once ('./autoload.php');
 
 class camisetaController{
 	public $page_title;
@@ -16,6 +16,7 @@ class camisetaController{
 
 	/* List all camisetes */
 	public function list(){
+		$this->view = 'list_camiseta';
 		$this->page_title = 'Llistat de camisetes';
 		return $this->camisetaObj->getCamisetes();
 	}

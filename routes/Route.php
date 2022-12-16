@@ -1,11 +1,12 @@
 <?php
+namespace routes;
 class Route{
 
   private static $routes = Array();
   private static $pathNotFound = null;
   private static $methodNotAllowed = null;
 
-  public static function add($expression, $function, $method = 'get'){
+  public static function add($expression, $function, $method){
     array_push(self::$routes,Array(
       'expression' => $expression,
       'function' => $function,
@@ -71,8 +72,8 @@ class Route{
           }
 
           call_user_func_array($route['function'], $matches);
-          var_dump($route);
-          var_dump($matches);
+          //var_dump($route);
+          //var_dump($matches);
           $route_match_found = true;
 
           // Do not check other routes
