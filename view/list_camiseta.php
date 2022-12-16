@@ -33,8 +33,8 @@
 	</div>
 	<?php
 	
-	if(count($dataToView["data"])>0){
-		foreach($dataToView["data"] as $camiseta){
+	if(count($dataToView)>0){
+		foreach($dataToView as $camiseta){
 			?>
 			
 			<div class="col-md-3 col-12">
