@@ -8,9 +8,12 @@ require_once ('./autoload.php');
 
 // INDEX LIST
 Route::add('/',function() {
+    
     $controller = new camisetaController;
-
+    
    $controller->list();
+   require_once './view/'.$controller->view.'.php';
+   
 },'get');
 
 // EDIT_CAMISETA

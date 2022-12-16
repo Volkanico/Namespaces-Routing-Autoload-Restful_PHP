@@ -1,6 +1,6 @@
 <?php 
 namespace controller;
-use controller\camisetaController;
+
 
 require_once '../config/config.php';
 require_once '../model/db.php';
@@ -25,9 +25,9 @@ if(method_exists($controller,$_GET["action"])) $dataToView["data"] = $controller
 
 
 /* Load views */
-require_once '../view/template/header.php';
+
 require_once '../view/'.$controller->view.'.php';
-require_once '../view/template/footer.php';
+
 //var_dump($dataToView);
 //var_dump($_GET["action"]);
 //var_dump($controllerName);
