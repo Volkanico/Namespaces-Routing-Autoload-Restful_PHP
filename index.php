@@ -1,4 +1,44 @@
 <?php
+
+use controller\camisetaController;
+//use Controller\ControllerShoppingCart;
+use routes\Route;
+
+//Front controller
+//use Lib\FrontController;
+//FrontController::main();
+
+require_once 'autoload.php';
+
+//Productes
+Route::add('/', function () {
+    $controller = new camisetaController();
+    $controller->list();
+    require_once './view/'.$controller->view.'.php';
+});
+
+Route::add('/form', function () {
+    $controller = new camisetaController();
+    $controller->edit();
+});
+
+Route::add('/product/add', function () {
+    $controller = new camisetaController();
+    $controller->save();
+}, 'POST');
+
+Route::add('/product/confirmDelete', function ($id) {
+    $controller = new camisetaController();
+    $controller->confirmDelete();
+});
+
+Route::add('/product/delete', function ($id) {
+    $controller = new camisetaController();
+    $controller->delete();
+});
+
+Route::run();
+/*
 use controller\camisetaController;
 use routes\Route;
 
@@ -33,5 +73,5 @@ Route::add('/foo/([0-9]*)/bar',function($var1){
     echo $var1.' is a great number!';
 },'get');
 
-Route::run('/');
+Route::run('/');*/
 ?>

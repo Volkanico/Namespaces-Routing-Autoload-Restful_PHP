@@ -1,6 +1,7 @@
 <?php 
 namespace controller;
 use model\Camiseta;
+use view\View;
 
 require_once ('./autoload.php');
 
@@ -14,23 +15,23 @@ class camisetaController{
 		$this->camisetaObj = new Camiseta();
 	}
 
-	/* List all camisetes */
+	// List all camisetes
 	public function list(){
 		$this->view = 'list_camiseta';
 		$this->page_title = 'Llistat de camisetes';
 		return $this->camisetaObj->getCamisetes();
 	}
 
-	/* Load camiseta for edit */
+	// Load camiseta for edit
 	public function edit($id = null){
 		$this->page_title = 'Editar camiseta';
 		$this->view = 'edit_camiseta';
-		/* Id can from get param or method param */
+		// Id can from get param or method param
 		if(isset($_GET["id"])) $id = $_GET["id"];
 		return $this->camisetaObj->getCamisetaById($id);
 	}
 
-	/* Create or update camiseta */
+	// Create or update camiseta 
 	public function save(){
 		$this->view = 'edit_camiseta';
 		$this->page_title = 'Guardar camiseta';
@@ -40,14 +41,14 @@ class camisetaController{
 		return $result;
 	}
 
-	/* Confirm to delete */
+	// Confirm to delete
 	public function confirmDelete(){
 		$this->page_title = 'Eliminar camiseta';
 		$this->view = 'confirm_delete_camiseta';
 		return $this->camisetaObj->getCamisetaById($_GET["id"]);
 	}
 
-	/* Delete */
+	// Delete 
 	public function delete(){
 		$this->page_title = 'Listado de camiseta';
 		$this->view = 'delete_camiseta';

@@ -1,5 +1,5 @@
 <?php
-
+// NO S'HA IMPLEMENTAT EL CARRETO AMB UNA TAULA DE BBDD PEL TEMPS, TENIA PRIORITAT EN REALITZAR EL ROUTING I RESTFUL
 session_start();
 class camisetaPerArray {
   private $id;
@@ -78,7 +78,7 @@ $carreto= array (
         <a class="btn btn-outline-danger" href="../index.php">Cancelar</a>
     </div>
     
-    
+
 </div>
 </body>
 <!--FINAL DEL CODI HTML-->

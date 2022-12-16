@@ -2,8 +2,9 @@
 namespace controller;
 
 
-require_once '../config/config.php';
-require_once '../model/db.php';
+
+//require_once '../config/config.php';
+//require_once '../model/db.php';
 
 if(!isset($_GET["controller"])) $_GET["controller"] = constant("DEFAULT_CONTROLLER");
 if(!isset($_GET["action"])) $_GET["action"] = constant("DEFAULT_ACTION");
