@@ -1,12 +1,6 @@
 <?php
-
 use controller\camisetaController;
-//use Controller\ControllerShoppingCart;
 use routes\Route;
-
-//Front controller
-//use Lib\FrontController;
-//FrontController::main();
 
 require_once 'autoload.php';
 
@@ -14,7 +8,7 @@ require_once 'autoload.php';
 Route::add('/', function () {
     $controller = new camisetaController();
     $controller->list();
-    require_once './view/'.$controller->view.'.php';
+    
 });
 
 Route::add('/form', function () {
@@ -27,12 +21,12 @@ Route::add('/product/add', function () {
     $controller->save();
 }, 'POST');
 
-Route::add('/product/confirmDelete', function ($id) {
+Route::add('/product/confirmDelete', function () {
     $controller = new camisetaController();
     $controller->confirmDelete();
 });
 
-Route::add('/product/delete', function ($id) {
+Route::add('/product/delete', function () {
     $controller = new camisetaController();
     $controller->delete();
 });

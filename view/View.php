@@ -15,5 +15,6 @@ class View {
         header("Location: /");
 
         require_once $viewPath;
+        
     }
 }
