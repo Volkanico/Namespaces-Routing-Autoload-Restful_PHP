@@ -29,7 +29,7 @@ Route::add('/product/confirmDelete', function () {
 Route::add('/product/delete', function () {
     $controller = new camisetaController();
     $controller->delete();
-});
+},'POST');
 
 Route::run();
 /*
