@@ -10,7 +10,9 @@ require_once ('./autoload.php');
 Route::add('/',function() {
     
     $controller = new camisetaController;
-    
+    $dataToView["data"] = array();
+if(method_exists($controller,$_GET["action"])) $dataToView["data"] = $controller->{$_GET["action"]}();
+
    $controller->list();
    require_once './view/'.$controller->view.'.php';
    
