@@ -19,7 +19,9 @@ class camisetaController{
 	public function list(){
 		$this->view = 'list_camiseta';
 		$this->page_title = 'Llistat de camisetes';
-		return $this->camisetaObj->getCamisetes();
+		$dataToView = $this->camisetaObj->getCamisetes();
+		$a = new View();
+		$a->render('list_camiseta.php',$dataToView);
 	}
 
 	// Load camiseta for edit
@@ -28,7 +30,10 @@ class camisetaController{
 		$this->view = 'edit_camiseta';
 		// Id can from get param or method param
 		if(isset($_GET["id"])) $id = $_GET["id"];
-		return $this->camisetaObj->getCamisetaById($id);
+		$dataToView = $this->camisetaObj->getCamisetaById($id);
+		$a = new View();
+		$a->render('edit_camiseta.php',$dataToView);
+		
 	}
 
 	// Create or update camiseta 
@@ -38,6 +43,9 @@ class camisetaController{
 		$id = $this->camisetaObj->save($_POST);
 		$result = $this->camisetaObj->getCamisetaById($id);
 		$_GET["response"] = true;
+		$dataToView = $result;
+		$a = new View();
+		$a->render('edit_camiseta.php',$dataToView);
 		return $result;
 	}
 

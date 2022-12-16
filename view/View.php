@@ -9,7 +9,7 @@ class View {
     public function render($name,$dataToView) :void
     {
         $this->dataToView = $dataToView;
-        $viewPath = 'view/View'.$name;
+        $viewPath = 'view/'.$name;
 
         if(!file_exists($viewPath))
         header("Location: /");
